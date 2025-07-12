@@ -79,7 +79,7 @@ To manage large rule sets and enhance throughput, the design instantiates multip
 2. **Source Files**: Add all Verilog source files from the `HW_source/` directory to your project.
 3. **Memory Initialization**: Ensure the synthesis/simulation environment is configured to locate the `.mem` files from the `data/` directory to initialize the BRAMs. This is a critical step for the design to function correctly.
 4. **Top Module**: Set `prfc_top` as the top-level design unit.
-5.**Simulation**:
+5. **Simulation**:
    - Add the testbench file from `sim/prfc_top_tb.v` to your simulation set.
-   - Run the simulation. The testbench will generate a log file at `./prfc_test.log`.
+   - Run the simulation. The testbench will generate a log file at `./prfc_test.log`. (**Note**: in the `./xx.sim/.../prfc_test.log`, Not in the `./xx.srcs/.../...`)
 
