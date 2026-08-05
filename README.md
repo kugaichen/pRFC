@@ -1,5 +1,7 @@
 # pRFC
 
+<img width="2714" height="2554" alt="figure_2" src="https://github.com/user-attachments/assets/3913d30f-40b8-4c87-bce6-1ff7769b0a4e" />
+
 pRFC is an open-source research prototype for packet classification. This
 repository combines:
 
