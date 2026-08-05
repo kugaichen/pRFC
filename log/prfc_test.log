@@ -1,0 +1,101 @@
+==================================================
+ pRFC Top Level Testbench Log
+==================================================
+Clock period: 4 ns (Frequency: 250 MHz)
+
+[0] Applying system reset...
+[32000] Reset complete. System ready.
+
+
+--- Test Scenario 1: Single Packet Latency ---
+[34000] SENT Packet 1: SrcIP=2111292831, DstIP=1140850687, SrcPort=0, DstPort=65535
+[38000] Pipeline State: S1=1 S2=0 S3=0 S4=0 S5=0
+[42000] Pipeline State: S1=0 S2=1 S3=0 S4=0 S5=0
+[46000] Pipeline State: S1=0 S2=0 S3=1 S4=0 S5=0
+[50000] Pipeline State: S1=0 S2=0 S3=0 S4=1 S5=0
+[66000] *** RESULT 1 RECEIVED: 0x0000130f (4879) ***
+Latency: 34 ns (8 cycles)
+      -> Analysis: VALID RULE MATCH. Matched Rule ID: 4879.
+[66000] Pipeline State: S1=0 S2=0 S3=0 S4=0 S5=1
+[86000] Pipeline is clear.
+
+
+--- Test Scenario 2: Pipeline Throughput ---
+
+--- Test Packet List ---
+Packet 1: SrcIP=2111292831, DstIP=1140850687, SrcPort=0, DstPort=65535
+Packet 2: SrcIP=2111292832, DstIP=2973055903, SrcPort=65535, DstPort=80
+Packet 3: SrcIP=2111292815, DstIP=2508209, SrcPort=0, DstPort=80
+Packet 4: SrcIP=3790848000, DstIP=3992977408, SrcPort=0, DstPort=0
+Packet 5: SrcIP=3087007744, DstIP=2973073407, SrcPort=65535, DstPort=0
+Packet 6: SrcIP=2952790015, DstIP=2973055888, SrcPort=0, DstPort=65535
+Packet 7: SrcIP=3118012927, DstIP=2105282709, SrcPort=0, DstPort=1024
+Packet 8: SrcIP=2111295487, DstIP=4294967295, SrcPort=65535, DstPort=0
+Packet 9: SrcIP=1549664255, DstIP=2973052928, SrcPort=0, DstPort=137
+Packet 10: SrcIP=3118013069, DstIP=2973055886, SrcPort=0, DstPort=53
+------------------------
+
+--- Sending Packets ---
+[90000] SENT Packet 1
+[94000] Pipeline State: S1=1 S2=0 S3=0 S4=0 S5=0
+[98000] SENT Packet 2
+[98000] Pipeline State: S1=0 S2=1 S3=0 S4=0 S5=0
+[102000] Pipeline State: S1=1 S2=0 S3=1 S4=0 S5=0
+[106000] SENT Packet 3
+[106000] Pipeline State: S1=0 S2=1 S3=0 S4=1 S5=0
+[110000] Pipeline State: S1=1 S2=0 S3=1 S4=0 S5=0
+[114000] SENT Packet 4
+[114000] Pipeline State: S1=0 S2=1 S3=0 S4=1 S5=0
+[118000] Pipeline State: S1=1 S2=0 S3=1 S4=0 S5=0
+[122000] SENT Packet 5
+[122000] Pipeline State: S1=0 S2=1 S3=0 S4=1 S5=1
+[126000] Pipeline State: S1=1 S2=0 S3=1 S4=0 S5=0
+[130000] SENT Packet 6
+[130000] Pipeline State: S1=0 S2=1 S3=0 S4=1 S5=1
+[134000] Pipeline State: S1=1 S2=0 S3=1 S4=0 S5=0
+[138000] SENT Packet 7
+[138000] Pipeline State: S1=0 S2=1 S3=0 S4=1 S5=1
+[142000] Pipeline State: S1=1 S2=0 S3=1 S4=0 S5=0
+[146000] SENT Packet 8
+[146000] Pipeline State: S1=0 S2=1 S3=0 S4=1 S5=1
+[150000] Pipeline State: S1=1 S2=0 S3=1 S4=0 S5=0
+[154000] SENT Packet 9
+[154000] Pipeline State: S1=0 S2=1 S3=0 S4=1 S5=1
+[158000] Pipeline State: S1=1 S2=0 S3=1 S4=0 S5=0
+[162000] SENT Packet 10
+[162000] Pipeline State: S1=0 S2=1 S3=0 S4=1 S5=1
+[166000] All 10 packets sent.
+[166000] Pipeline State: S1=1 S2=0 S3=1 S4=0 S5=0
+[170000] Pipeline State: S1=0 S2=1 S3=0 S4=1 S5=1
+[174000] Pipeline State: S1=0 S2=0 S3=1 S4=0 S5=0
+[178000] Pipeline State: S1=0 S2=0 S3=0 S4=1 S5=1
+[186000] Pipeline State: S1=0 S2=0 S3=0 S4=0 S5=1
+
+--- Received Results (Unified) ---
+[122000] *** RESULT 1 RECEIVED: 0x0000130f (4879) ***
+      -> Analysis: VALID RULE MATCH. Matched Rule ID: 4879.
+[130000] *** RESULT 2 RECEIVED: 0x00000112 (274) ***
+      -> Analysis: VALID RULE MATCH. Matched Rule ID: 274.
+[138000] *** RESULT 3 RECEIVED: 0x00000027 (39) ***
+      -> Analysis: VALID RULE MATCH. Matched Rule ID: 39.
+[146000] *** RESULT 4 RECEIVED: 0x00001993 (6547) ***
+      -> Analysis: VALID RULE MATCH. Matched Rule ID: 6547.
+[154000] *** RESULT 5 RECEIVED: 0x00001aa5 (6821) ***
+      -> Analysis: VALID RULE MATCH. Matched Rule ID: 6821.
+[162000] *** RESULT 6 RECEIVED: 0x0000150e (5390) ***
+      -> Analysis: VALID RULE MATCH. Matched Rule ID: 5390.
+[170000] *** RESULT 7 RECEIVED: 0x0000053e (1342) ***
+      -> Analysis: VALID RULE MATCH. Matched Rule ID: 1342.
+[178000] *** RESULT 8 RECEIVED: 0x00002250 (8784) ***
+      -> Analysis: VALID RULE MATCH. Matched Rule ID: 8784.
+[186000] *** RESULT 9 RECEIVED: 0x000006b7 (1719) ***
+      -> Analysis: VALID RULE MATCH. Matched Rule ID: 1719.
+[194000] *** RESULT 10 RECEIVED: 0x00000001 (1) ***
+      -> Analysis: VALID RULE MATCH. Matched Rule ID: 1.
+[194000] Pipeline State: S1=0 S2=0 S3=0 S4=0 S5=1
+[214000] Pipeline is clear.
+
+
+=== All Tests Completed Successfully ===
+Total simulation time: 214 ns
+==================================================
