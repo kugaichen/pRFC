@@ -1,6 +1,7 @@
-# pRFC
+# pRFC software implementation
 
-pRFC is a C++17 research prototype for building and simulating an improved
+This directory contains the C++17 research prototype for building and
+simulating an improved
 Recursive Flow Classification (RFC) packet classifier. It preprocesses a
 ClassBench-style rule set, divides rules into four sub-classifiers, builds the
 sub-classifiers in parallel, and can optionally simulate packet lookup.
@@ -34,6 +35,8 @@ FilterReader -> Filter_Preprocess -> L_L / L_H / H_L / H_H
 - A thread implementation supported by CMake
 
 ## Build
+
+From this `software/` directory:
 
 ```bash
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
