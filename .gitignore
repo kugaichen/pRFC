@@ -1,0 +1,27 @@
+# CMake and compiler outputs
+/build/
+/cmake-build-*/
+/out/
+/CMakeFiles/
+/CMakeCache.txt
+/cmake_install.cmake
+/Makefile
+*.o
+*.obj
+*.exe
+*.pdb
+
+# IDE and operating-system files
+/.vscode/
+/.idea/
+.DS_Store
+Thumbs.db
+
+# Runtime lookup output
+/lookupresult.txt
+/SE_lookupresult.txt
+/L_L.txt
+/L_H.txt
+/H_L.txt
+/H_H.txt
+/x.txt
